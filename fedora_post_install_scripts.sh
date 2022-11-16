@@ -1,7 +1,6 @@
 #!/bin/sh
 echo -e "fastestmirror=True\ndeltarpm=True\nmax_parallel_downloads=10" | sudo tee -a /etc/dnf/dnf.conf
 sudo dnf update
-sudo hostnamectl set-hostname Phani-HP15
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo dnf config-manager --add-repo https://packages.microsoft.com/yumrepos/edge sudo mv /etc/yum.repos.d/packages.microsoft.com_yumrepos_edge.repo /etc/yum.repos.d/microsoft-edge-stable.repo
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
@@ -26,6 +25,3 @@ sudo systemctl enable docker
 sudo systemctl start --now docker
 flatpak install slack
 flatpak install spotify
-
-
-
