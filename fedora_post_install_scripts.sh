@@ -22,5 +22,4 @@ sudo usermod -aG docker $(whoami)
 newgrp docker
 sudo systemctl enable docker
 sudo systemctl start --now docker
-flatpak install slack
 flatpak install spotify
